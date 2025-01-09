@@ -5,25 +5,19 @@ let circleSector = []; // пустой массив
 const sectorLabels = document.querySelector('.sectorLabels'); // пустой див для лейблов
 const chosenStudent = document.querySelector('.studentsName');
 
-// генерируем случайный цвет сектора
-// function getRandomColor() {
-//     const letters = '0123456789ABCDEF';
-//     let color = '#';
-//     for (let i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
+document.addEventListener('DOMContentLoaded', () => {
+    checkboxNames.forEach((checkbox) => {
+        checkbox.checked = false;
+    })
+})
 
-//беру только светлые цвета, чтобы видеть текст
-function getRandomLightColor() {
-    const minBrightness = 180;
+const colors = ["#FFC107", "#03A9F4", "#8BC34A", "#FF5722", "#8243D6"];
+let currentColorIndex = 0;
 
-    const r = Math.floor(Math.random() * (256 - minBrightness) + minBrightness);
-    const g = Math.floor(Math.random() * (256 - minBrightness) + minBrightness);
-    const b = Math.floor(Math.random() * (256 - minBrightness) + minBrightness);
-
-    const color = `rgb(${r}, ${g}, ${b})`;
+function getColor() {
+    // следующий цвет из массива
+    const color = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
     return color;
 }
 
@@ -33,7 +27,7 @@ checkboxNames.forEach((checkbox) => {
         const name = checkbox.value;
         if (checkbox.checked) {
             // Добавляем имя в массив и случайный цвет
-            circleSector.push({ name, color: getRandomLightColor() });
+            circleSector.push({ name, color: getColor() });
         } else {
             // Удаляем имя из массива
             circleSector = circleSector.filter((sector) => sector.name !== name);
@@ -59,6 +53,7 @@ function updateWheel() {
         const startAngle = angle;
         const endAngle = angle + sectorSize;
         angle += sectorSize;
+
         return `${sector.color} ${startAngle}deg ${endAngle}deg`;
     });
 
@@ -87,11 +82,8 @@ function updateWheel() {
 
         const label = document.createElement('div');
         label.textContent = sector.name;
-
-        // const radius = 200;
-        label.style.transform = `rotate(${getRotationAngle()}deg) translate(-170px)`;
+        label.style.transform = `rotate(${getRotationAngle()}deg) translate(-185px)`;
         sectorLabels.appendChild(label);
-
     });
 };
 
@@ -114,21 +106,20 @@ const checkAll = document.querySelector('.checkAllBtn').addEventListener('click'
 
         const exists = circleSector.some((sector) => sector.name === name);
         if (!exists) {
-            circleSector.push({ name, color: getRandomLightColor() });
+            circleSector.push({ name, color: getColor() });
         }
     });
     updateWheel();
 });
 
-// кнопка "крутить колесо"
-const btn = document.querySelector('.submitWheel').addEventListener('click', function () {
+function spinWheel() {
     chosenStudent.textContent = "";
     const randomAngle = Math.random() * 360;
     const fullRotations = 1800;
     const finalAngle = fullRotations + randomAngle;
 
     // анимация
-    circle.style.transition = 'transform 5s ease-out';
+    circle.style.transition = 'transform 4s cubic-bezier(0.1, 0.9, 0.2, 1)';
     circle.style.transform = `rotate(${finalAngle}deg)`;
 
     setTimeout(() => {
@@ -142,5 +133,22 @@ const btn = document.querySelector('.submitWheel').addEventListener('click', fun
         const selectedSector = circleSector[selectedIndex];
         chosenStudent.textContent = selectedSector ? selectedSector.name : '';
 
-    }, 5000);
+    }, 4000);
+}
+
+// кнопка "крутить колесо"
+const btn = document.querySelector('.submitWheel').addEventListener('click', function () {
+    spinWheel()
+});
+
+// Обработка событий клика
+circle.addEventListener('click', () => {
+    spinWheel();
+});
+
+// Обработка событий нажатия клавиши Enter
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        spinWheel();
+    }
 });

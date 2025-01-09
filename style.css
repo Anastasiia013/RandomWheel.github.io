@@ -6,6 +6,8 @@
     list-style: none;
     letter-spacing: 0.5px;
     color: rgb(21, 31, 31);
+    scrollbar-color: rgba(130, 67, 214, 0.5) #E0E0E0;
+    scrollbar-width: thin;
 }
 
 body {
@@ -66,7 +68,8 @@ h1 {
     height: 500px;
     position: relative;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 8px 5px gray;
 }
 
 .sectorLabels {
@@ -85,7 +88,7 @@ h1 {
     font-size: 14px;
     line-height: 1;
     color: black;
-    font-weight: 400;
+    font-weight: 500;
     text-align: start;
     width: 100px;
 }
@@ -93,12 +96,12 @@ h1 {
 .namesBlock {
     min-height: fit-content;
     border: 1px solid gray;
-    box-shadow: 0px 0px 3px 2px gray;
+    box-shadow: 0px 0px 8px 3px gray;
     border-radius: 10px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-
+    gap: 8px;
 }
 
 .listButtons {
@@ -107,6 +110,41 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type='checkbox'] {
+    appearance: none;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #8243D6;
+    height: 20px;
+    width: 20px;
+    border-radius: 6px;
+    position: relative;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+input[type="checkbox"]:checked::before {
+    background-color: #8243D6;
+    height: 14px;
+    width: 14px;
+    border-radius: 4px;
 }
 
 .checkAllBtn,
@@ -120,6 +158,8 @@ h1 {
     cursor: pointer;
     width: 140px;
     letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    transition: 0.3s;
 }
 
 .checkAllBtn:hover,
@@ -134,30 +174,46 @@ h1 {
     gap: 6px;
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
     height: 300px;
     overflow-y: auto;
     flex-wrap: nowrap;
 }
 
+@keyframes spinSlowDown {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    90% {
+        transform: rotate(var(--finalAngle));
+    }
+
+    100% {
+        transform: rotate(calc(var(--finalAngle) + 1deg));
+        /* небольшой доворот */
+    }
+}
+
 .submitWheel {
     padding: 16px 24px;
-    margin-top: 10px;
+    margin-top: 30px;
     outline: none;
     border: 1px solid transparent;
-    box-shadow: 0px 0px 3px 2px rgb(65, 179, 99);
-    background-color: rgb(80, 247, 130);
+    box-shadow: 0px 0px 3px 2px #9061cd;
+    background-color: #b98df3;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 800;
     font-size: 16px;
     line-height: 20px;
     color: rgb(21, 31, 31);
+    transition: 0.3s;
 }
 
 .submitWheel:hover {
-    box-shadow: 0px 0px 3px 2px rgb(22, 156, 51);
-    background-color: rgb(22, 156, 51);
+    box-shadow: 0px 0px 3px 2px #8243D6;
+    background-color: #8243D6;
     color: white;
     font-weight: 800;
+    font-size: larger;
 }
