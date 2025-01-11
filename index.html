@@ -5,61 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RandomWheel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
-        <h1>Колесо Фортуны</h1>
-        <div class="studentsName"></div>
-        <section class="wheelBody">
+        <section class="mainBox">
+            <h1>Колесо Фортуны</h1>
+            <div class="studentsName"></div>
+            <section class="wheelBody">
 
-            <div class="namesBlock">
-                <h2>Выбрать студентов:</h2>
-                <div class="listButtons">
-                    <input class="checkAllBtn" type="button" name="name1" id="checkAll" value="Выбрать всех">
-                    <input class="resetAllBtn" type="reset" name="reset" id="resetAll" value="Сброс">
-                </div>
+                <div class="namesBlock">
+                    <h2>Выбрать студентов:</h2>
 
-                <div class="listNames">
-                    <label><input type="checkbox" value="Nataliia" /> Nataliia</label>
-                    <label><input type="checkbox" value="Mykyta" /> Mykyta</label>
-                    <label><input type="checkbox" value="Kateryna" /> Kateryna</label>
-                    <label><input type="checkbox" value="Vladimir" /> Vladimir</label>
-                    <label><input type="checkbox" value="Daniela" /> Daniela</label>
-                    <label><input type="checkbox" value="Azamat" /> Azamat</label>
-                    <label><input type="checkbox" value="Anton" /> Anton</label>
-                    <label><input type="checkbox" value="Anastasiia Ihnatkova" /> Anastasiia Ihnatkova</label>
-                    <label><input type="checkbox" value="Daniel Bich" /> Daniel Bich</label>
-                    <label><input type="checkbox" value="Alina" /> Alina</label>
-                    <label><input type="checkbox" value="Andrei" /> Andrei</label>
-                    <label><input type="checkbox" value="Bekbolot" /> Bekbolot</label>
-                    <label><input type="checkbox" value="Gustavo" /> Gustavo</label>
-                    <label><input type="checkbox" value="Anastasiia Posokhova" /> Anastasiia Posokhova</label>
-                    <label><input type="checkbox" value="Dima Tao" /> Dima Tao</label>
-                    <label><input type="checkbox" value="Pavlo" /> Pavlo</label>
-                    <label><input type="checkbox" value="Yuliia" /> Yuliia</label>
-                    <label><input type="checkbox" value="Vladyslav" /> Vladyslav</label>
-                    <label><input type="checkbox" value="Iryna Nikitenko" /> Iryna Nikitenko</label>
-                    <label><input type="checkbox" value="Sergei" /> Sergei</label>
-                    <label><input type="checkbox" value="Ruslan" /> Ruslan</label>
-                    <label><input type="checkbox" value="Abilbek" /> Abilbek</label>
-                    <label><input type="checkbox" value="Dmitrii Osadcii" /> Dmitrii Osadcii</label>
-                    <label><input type="checkbox" value="Valentyna" /> Valentyna</label>
-                    <label><input type="checkbox" value="Teimur" /> Teimur</label>
-                    <label><input type="checkbox" value="Maryna" /> Maryna</label>
-                    <label><input type="checkbox" value="Elizaveta" /> Elizaveta</label>
-                    <label><input type="checkbox" value="Iryna Hurskaya" /> Iryna Hurskaya</label>
+                    <div class="searchBox">
+                        <input type="search" id="searchBar" placeholder="Поиск">
+                        <button class="searchButton">
+                            <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="listButtons">
+                        <input class="checkAllBtn" type="button" name="name1" id="checkAll" value="Выбрать всех">
+                        <input class="resetAllBtn" type="reset" name="reset" id="resetAll" value="Сброс">
+                    </div>
+
+                    <div class="listNames">
+                        <label><input type="checkbox" value="Наталия" /> Наталия</label>
+                        <label><input type="checkbox" value="Никита" /> Никита</label>
+                        <label><input type="checkbox" value="Катерина" /> Катерина</label>
+                        <label><input type="checkbox" value="Владимир" /> Владимир</label>
+                        <label><input type="checkbox" value="Даниэла" /> Даниэла</label>
+                        <label><input type="checkbox" value="Азамат" /> Азамат</label>
+                        <label><input type="checkbox" value="Антон" /> Антон</label>
+                        <label><input type="checkbox" value="Анастасия Игнаткова" /> Анастасия Игнаткова</label>
+                        <label><input type="checkbox" value="Даниэль" /> Даниэль</label>
+                        <label><input type="checkbox" value="Алина" /> Алина</label>
+                        <label><input type="checkbox" value="Андрей" /> Андрей</label>
+                        <label><input type="checkbox" value="Бекболот" /> Бекболот</label>
+                        <label><input type="checkbox" value="Густаво" /> Густаво</label>
+                        <label><input type="checkbox" value="Анастасия Посохова" /> Анастасия Посохова</label>
+                        <label><input type="checkbox" value="Дима Тао" /> Дима Тао</label>
+                        <label><input type="checkbox" value="Павло" /> Павло</label>
+                        <label><input type="checkbox" value="Юлия" /> Юлия</label>
+                        <label><input type="checkbox" value="Влад" /> Влад</label>
+                        <label><input type="checkbox" value="Ирина Никитенко" /> Ирина Никитенко</label>
+                        <label><input type="checkbox" value="Сергей" /> Сергей</label>
+                        <label><input type="checkbox" value="Руслан" /> Руслан</label>
+                        <label><input type="checkbox" value="Абилбек" /> Абилбек</label>
+                        <label><input type="checkbox" value="Дмитрий Осадчий" /> Дмитрий Осадчий</label>
+                        <label><input type="checkbox" value="Валентина" /> Валентина</label>
+                        <label><input type="checkbox" value="Тимур" /> Тимур</label>
+                        <label><input type="checkbox" value="Марина" /> Марина</label>
+                        <label><input type="checkbox" value="Елизавета" /> Елизавета</label>
+                        <label><input type="checkbox" value="Ирина Гуртская" /> Ирина Гуртская</label>
+                    </div>
+                    <button class="submitWheel" type="submit">Крутить колесо</button>
                 </div>
-                <button class="submitWheel" type="submit">Крутить колесо</button>
-            </div>
-            <div class="wheelCaret">
-                <img src="img/right-arrow.png" alt="caret down" width="30px" height="30px">
-                <div class="wheelMain">
-                    <div class="sectorLabels"></div>
+                <div class="wheelCaret">
+                    <img src="img/right-arrow.png" alt="caret down" width="30px" height="30px">
+                    <div class="wheelMain">
+                        <div class="sectorLabels"></div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </section>
+
+        <div class="author">
+            <hr>
+            <p>Anastasiia Posokhova</p>
+            <a href="https://www.linkedin.com/in/anastasiiaposokhova/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+            </a>
+        </div>
     </main>
     <script src="main.js"></script>
 </body>

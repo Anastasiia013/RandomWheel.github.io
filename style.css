@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", serif;
     list-style: none;
     letter-spacing: 0.5px;
     color: rgb(21, 31, 31);
@@ -12,23 +12,41 @@
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    background-color: antiquewhite;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.mainBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
+
 }
 
 h1 {
     text-transform: uppercase;
     font-size: 36px;
+    cursor: default;
+}
+
+h2 {
+    cursor: default;
 }
 
 .studentsName {
@@ -40,6 +58,38 @@ h1 {
     font-weight: 600;
     font-size: larger;
     color: darkblue;
+}
+
+.searchBox {
+    display: flex;
+    height: 50px;
+}
+
+.searchIcon:hover {
+    width: 20px;
+    height: 20px;
+}
+
+.searchBox input,
+.searchBox button {
+    background-color: #e6e3e3;
+    border: none;
+    outline: none;
+}
+
+.searchBox input {
+    flex-basis: 85%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 12px 0px 12px 20px;
+}
+
+.searchBox button {
+    flex-basis: 15%;
+    padding: 12px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
 }
 
 .wheelBody {
@@ -84,13 +134,12 @@ h1 {
 .sectorLabels div {
     position: absolute;
     top: 48%;
-    left: 40%;
+    left: 37%;
     font-size: 14px;
     line-height: 1;
     color: black;
-    font-weight: 500;
     text-align: start;
-    width: 100px;
+    width: 130px;
 }
 
 .namesBlock {
@@ -109,7 +158,7 @@ h1 {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 10px 0px;
+    padding: 4px 2px;
 }
 
 label {
@@ -156,7 +205,7 @@ input[type="checkbox"]:checked::before {
     background-color: bisque;
     border-radius: 6px;
     cursor: pointer;
-    width: 140px;
+    width: 160px;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
     transition: 0.3s;
@@ -174,7 +223,7 @@ input[type="checkbox"]:checked::before {
     gap: 6px;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 250px;
     overflow-y: auto;
     flex-wrap: nowrap;
 }
@@ -190,7 +239,6 @@ input[type="checkbox"]:checked::before {
 
     100% {
         transform: rotate(calc(var(--finalAngle) + 1deg));
-        /* небольшой доворот */
     }
 }
 
@@ -216,4 +264,38 @@ input[type="checkbox"]:checked::before {
     color: white;
     font-weight: 800;
     font-size: larger;
+}
+
+.author {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+    gap: 6px;
+}
+
+.author hr {
+    height: 40px;
+    width: 2px;
+    background-color: gray;
+    border: none;
+    margin-right: 10px;
+}
+
+.author p {
+    width: 80px;
+    font-size: 14px;
+    color: gray;
+}
+
+.author a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.author a svg {
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
 }
