@@ -6,18 +6,14 @@
     list-style: none;
     letter-spacing: 0.5px;
     color: rgb(21, 31, 31);
-    scrollbar-color: rgba(130, 67, 214, 0.5) #E0E0E0;
+    /* scrollbar-color: rgba(130, 67, 214, 0.5) #E0E0E0; */
     scrollbar-width: thin;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     height: 100vh;
-    width: 100vw;
-    background-color: antiquewhite;
+    overflow: hidden;
 }
 
 main {
@@ -25,9 +21,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 1em;
     height: 100%;
-    background-color: #fff;
 }
 
 .mainBox {
@@ -35,8 +30,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-
+    gap: 1em;
 }
 
 h1 {
@@ -57,7 +51,14 @@ h2 {
     align-items: center;
     font-weight: 600;
     font-size: larger;
-    color: darkblue;
+    color: rgb(123, 6, 39);
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+    display: none;
 }
 
 .searchBox {
@@ -157,7 +158,7 @@ h2 {
     display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 4px 2px;
 }
 
@@ -223,9 +224,10 @@ input[type="checkbox"]:checked::before {
     gap: 6px;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 14em;
     overflow-y: auto;
     flex-wrap: nowrap;
+    font-size: 14px;
 }
 
 @keyframes spinSlowDown {
@@ -270,8 +272,11 @@ input[type="checkbox"]:checked::before {
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 90%;
-    gap: 6px;
+    width: 100%;
+    gap: 3px;
+    position: absolute;
+    bottom: 10px;
+    margin-right: 40px;
 }
 
 .author hr {
@@ -284,7 +289,7 @@ input[type="checkbox"]:checked::before {
 
 .author p {
     width: 80px;
-    font-size: 14px;
+    font-size: 12px;
     color: gray;
 }
 
