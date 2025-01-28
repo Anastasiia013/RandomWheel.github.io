@@ -276,20 +276,20 @@ input[type="checkbox"]:checked::before {
     gap: 3px;
     position: absolute;
     bottom: 10px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .author hr {
-    height: 40px;
-    width: 2px;
+    height: 30px;
+    width: 1px;
     background-color: gray;
     border: none;
     margin-right: 10px;
 }
 
 .author p {
-    width: 80px;
-    font-size: 12px;
+    width: 70px;
+    font-size: 10px;
     color: gray;
 }
 
@@ -300,7 +300,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .author a svg {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 4px;
 }
