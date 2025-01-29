@@ -13,7 +13,7 @@
 body {
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 main {
@@ -21,7 +21,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 10px;
     height: 100%;
 }
 
@@ -31,6 +31,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1em;
+    padding-bottom: 40px;
 }
 
 h1 {
@@ -272,9 +273,9 @@ input[type="checkbox"]:checked::before {
     display: flex;
     justify-content: end;
     align-items: center;
-    width: 95%;
+    width: 100%;
     gap: 12px;
-    position: absolute;
+    position: fixed;
     bottom: 10px;
     margin-right: 20px;
 }
