@@ -1,301 +1,409 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: "Roboto", serif;
-    list-style: none;
-    letter-spacing: 0.5px;
-    color: rgb(21, 31, 31);
-    scrollbar-color: rgba(130, 67, 214, 0.5) #E0E0E0;
-    scrollbar-width: thin;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', serif;
+  list-style: none;
+  letter-spacing: 0.5px;
+  color: rgb(21, 31, 31);
+  scrollbar-color: rgba(130, 67, 214, 0.5) #e0e0e0;
+  scrollbar-width: thin;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #8243d6;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 
 .mainBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 h1 {
-    text-transform: uppercase;
-    font-size: 36px;
-    cursor: default;
+  text-transform: uppercase;
+  font-size: 36px;
+  cursor: default;
 }
 
 h2 {
-    cursor: default;
+  cursor: default;
 }
 
 .studentsName {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 600;
-    font-size: larger;
-    color: darkblue;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: larger;
+  color: darkblue;
 }
 
 .searchBox {
-    display: flex;
-    height: 50px;
+  display: flex;
+  height: 50px;
 }
 
 .searchIcon:hover {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .searchBox input,
 .searchBox button {
-    background-color: #e6e3e3;
-    border: none;
-    outline: none;
+  background-color: #e6e3e3;
+  border: none;
+  outline: none;
 }
 
 .searchBox input {
-    flex-basis: 85%;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 12px 0px 12px 20px;
+  flex-basis: 85%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 12px 0px 12px 20px;
 }
 
 .searchBox button {
-    flex-basis: 15%;
-    padding: 12px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    cursor: pointer;
+  flex-basis: 15%;
+  padding: 12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
 }
 
 .wheelBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  height: 80%;
 }
 
 .wheelCaret {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .wheelCaret img {
-    transform: rotate(90deg);
-    margin-bottom: -15px;
-    z-index: 1;
+  transform: rotate(90deg);
+  margin-bottom: -15px;
+  z-index: 1;
 }
 
 .wheelMain {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    border-radius: 50%;
-    border: 1px solid gray;
-    box-shadow: 0px 0px 8px 5px gray;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 8px 5px gray;
 }
 
 .sectorLabels {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .sectorLabels div {
-    position: absolute;
-    top: 48%;
-    left: 37%;
-    font-size: 14px;
-    line-height: 1;
-    color: black;
-    text-align: start;
-    width: 130px;
+  position: absolute;
+  top: 48%;
+  left: 37%;
+  font-size: 14px;
+  line-height: 1;
+  color: black;
+  text-align: start;
+  width: 130px;
 }
 
 .namesBlock {
-    min-height: fit-content;
-    border: 1px solid gray;
-    box-shadow: 0px 0px 8px 3px gray;
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  min-height: fit-content;
+  border: 1px solid gray;
+  box-shadow: 0px 0px 8px 3px gray;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .listButtons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 2px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 2px;
 }
 
 label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 input[type='checkbox'] {
-    appearance: none;
-    cursor: pointer;
-    background: #fff;
-    border: 2px solid #8243D6;
-    height: 20px;
-    width: 20px;
-    border-radius: 6px;
-    position: relative;
+  appearance: none;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #8243d6;
+  height: 20px;
+  width: 20px;
+  border-radius: 6px;
+  position: relative;
 }
 
-input[type="checkbox"]::before {
-    content: "";
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    top: 0;
+input[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
 }
 
-input[type="checkbox"]:checked::before {
-    background-color: #8243D6;
-    height: 14px;
-    width: 14px;
-    border-radius: 4px;
+input[type='checkbox']:checked::before {
+  background-color: #8243d6;
+  height: 14px;
+  width: 14px;
+  border-radius: 4px;
 }
 
 .checkAllBtn,
 .resetAllBtn {
-    padding: 10px 0px;
-    outline: none;
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 3px 2px rgb(245, 212, 168);
-    background-color: bisque;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 160px;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-    transition: 0.3s;
+  padding: 10px 0px;
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 3px 2px rgb(245, 212, 168);
+  background-color: bisque;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 160px;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
 .checkAllBtn:hover,
 .resetAllBtn:hover {
-    box-shadow: 0px 0px 3px 2px rgb(230, 124, 75);
-    background-color: rgb(247, 146, 63);
-    color: white;
-    font-weight: 600;
+  box-shadow: 0px 0px 3px 2px rgb(230, 124, 75);
+  background-color: rgb(247, 146, 63);
+  color: white;
+  font-weight: 600;
 }
 
 .listNames {
-    gap: 6px;
-    display: flex;
-    flex-direction: column;
-    height: 250px;
-    overflow-y: auto;
-    flex-wrap: nowrap;
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  overflow-y: auto;
+  flex-wrap: nowrap;
 }
 
 @keyframes spinSlowDown {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    90% {
-        transform: rotate(var(--finalAngle));
-    }
+  90% {
+    transform: rotate(var(--finalAngle));
+  }
 
-    100% {
-        transform: rotate(calc(var(--finalAngle) + 1deg));
-    }
+  100% {
+    transform: rotate(calc(var(--finalAngle) + 1deg));
+  }
 }
 
 .submitWheel {
-    padding: 16px 24px;
-    margin-top: 30px;
-    outline: none;
-    border: 1px solid transparent;
-    box-shadow: 0px 0px 3px 2px #9061cd;
-    background-color: #b98df3;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
-    color: rgb(21, 31, 31);
-    transition: 0.3s;
+  padding: 16px 24px;
+  margin-top: 30px;
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 3px 2px #9061cd;
+  background-color: #b98df3;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(21, 31, 31);
+  transition: 0.3s;
 }
 
 .submitWheel:hover {
-    box-shadow: 0px 0px 3px 2px #8243D6;
-    background-color: #8243D6;
-    color: white;
-    font-weight: 800;
-    font-size: larger;
+  box-shadow: 0px 0px 3px 2px #8243d6;
+  background-color: #8243d6;
+  color: white;
+  font-weight: 800;
+  font-size: larger;
 }
 
 .author {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 90%;
-    gap: 6px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 90%;
+  gap: 6px;
+  margin-bottom: 20px;
 }
 
 .author hr {
-    height: 40px;
-    width: 2px;
-    background-color: gray;
-    border: none;
-    margin-right: 10px;
+  height: 40px;
+  width: 2px;
+  background-color: gray;
+  border: none;
+  margin-right: 10px;
 }
 
 .author p {
-    width: 80px;
-    font-size: 14px;
-    color: gray;
+  width: 80px;
+  font-size: 14px;
+  color: gray;
 }
 
 .author a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .author a svg {
-    height: 30px;
-    width: 30px;
-    border-radius: 4px;
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+}
+
+.team-p {
+  margin-top: 15px;
+}
+
+#teams,
+#remaining {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.team,
+.remaining {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team h3,
+.remaining h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.team p,
+.remaining p {
+  margin: 5px 0;
+}
+
+.team-button {
+  padding: 16px 24px;
+  margin-top: 30px;
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0px 0px 3px 2px #9061cd;
+  background-color: #b98df3;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(21, 31, 31);
+  transition: 0.3s;
+}
+
+.team-button:hover {
+  box-shadow: 0px 0px 3px 2px #8243d6;
+  background-color: #8243d6;
+  color: white;
+  font-weight: 800;
+  font-size: larger;
+}
+
+.team-author {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.team-author hr {
+  height: 40px;
+  width: 2px;
+  background-color: gray;
+  border: none;
+  margin-right: 10px;
+}
+
+.team-author p {
+  width: 80px;
+  font-size: 14px;
+  color: gray;
+}
+
+.team-author a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-author a svg {
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
 }
