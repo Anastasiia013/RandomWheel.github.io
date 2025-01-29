@@ -102,7 +102,7 @@
 
     .author {
         gap: 16px;
-        padding-top: 60px;
+        padding-top: 0px;
     }
 
     .author p {
@@ -142,6 +142,10 @@
     .checkAllBtn,
     .resetAllBtn {
         width: 50%;
+        box-shadow: none;
+    }
+
+    .submitWheel{
         box-shadow: none;
     }
 
