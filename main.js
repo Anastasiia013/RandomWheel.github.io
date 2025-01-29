@@ -261,4 +261,13 @@ document.addEventListener('click', (event) => {
         `;
         isActive = false;
     }
+});
+
+//раскрываем бургер меню в версии для маленьких экранов
+document.querySelector('.burger').addEventListener('click', function () {
+    document.querySelector('.burgerBox').classList.toggle('active');
+    document.querySelector('.menu').classList.toggle('active');
+
 })
+
+

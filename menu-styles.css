@@ -7,7 +7,14 @@ nav {
     background-color: #8243d6;
 }
 
-nav a {
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.menu li a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;

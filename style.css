@@ -16,6 +16,11 @@ body {
     /* overflow: hidden; */
 }
 
+.burger {
+    display: none;
+}
+
+
 main {
     display: flex;
     flex-direction: column;
