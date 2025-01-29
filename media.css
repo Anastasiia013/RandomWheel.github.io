@@ -1,5 +1,9 @@
 /* Медиазапрос для экранов Full HD*/
 @media (min-width: 1800px) and (max-width: 4000px) {
+    body {
+        overflow: hidden;
+    }
+
     main {
         justify-content: space-evenly;
         height: 100%;
@@ -111,6 +115,12 @@
 
 }
 
+@media (min-width:1000px) and (max-width:1800px) {
+    body {
+        overflow: hidden;
+    }
+}
+
 /* Медиазапрос для экранов дo 1000px */
 @media (min-width: 600px) and (max-width: 999px) {
     body {
@@ -145,7 +155,7 @@
         box-shadow: none;
     }
 
-    .submitWheel{
+    .submitWheel {
         box-shadow: none;
     }
 
